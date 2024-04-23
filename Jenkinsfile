@@ -16,13 +16,19 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Lint') {
+            steps {
+                sh '"C:\\Users\\chand\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pylint **/*.py' // Run pylint for Python linting
+            }
+        }
+
+        stage('Check Version') {
             steps {
                 sh '"C:\\Users\\chand\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" --version'  // Check Python version
             }
         }
 
-        stage('Test') {
+        stage('Build and Run') {
             steps {
                 sh '"C:\\Users\\chand\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" main.py'  // Run your Python program
             }
