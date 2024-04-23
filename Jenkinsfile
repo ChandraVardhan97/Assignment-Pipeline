@@ -11,7 +11,7 @@ pipeline {
                 checkout(
                     $class: 'GitSCM',
                     branches: [[name: '*/main']], // Check out the 'main' branch
-                    userRemoteConfigs: [[url: 'https://github.com/ChandraVardhan97/Assignment-Pipeline.git']] 
+                    userRemoteConfigs: [[url: 'https://github.com/ChandraVardhan97/Assignment-Pipeline']] 
                 )
             }
         }
