@@ -18,7 +18,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh '/Users/chand/AppData/Local/Microsoft/WindowsApps/python3.exe --version'  // Check Python version
+                sh 'C:/Users/chand/AppData/Local/Microsoft/WindowsApps/python3.exe --version'  // Check Python version
             }
         }
 
