@@ -18,13 +18,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh '/Users/chand/AppData/Local/Microsoft/WindowsApps/python3.exe --version'  // Check Python version
+                sh 'python --version'  // Check Python version
             }
         }
 
         stage('Test') {
             steps {
-                sh 'python3 main.py'  // Run your Python program
+                sh 'python main.py'  // Run your Python program
             }
         }
     }
